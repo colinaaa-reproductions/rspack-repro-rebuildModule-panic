@@ -5,7 +5,6 @@
   "scripts": {
     "build": "npm-run-all build:* --sequential --print-name",
     "build:rspack": "cross-env RSPACK=1 rspack",
-    "build:rsbuild": "rsbuild build",
     "build:webpack": "cross-env WEBPACK=1 webpack -c ./rspack.config.mjs",
     "dev:rspack": "cross-env RSPACK=1 rspack dev",
     "dev:rsbuild": "rsbuild dev",
@@ -14,13 +13,13 @@
   "dependencies": {
     "@rspack/cli": "^1.1.8",
     "@rspack/core": "^1.1.8",
-    "html-webpack-plugin": "^5.6.3",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1"
   },
   "devDependencies": {
-    "@rsbuild/core": "^1.1.13",
     "cross-env": "^7.0.3",
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.2",
     "npm-run-all2": "^7.0.2"
   },
   "packageManager": "pnpm@9.15.2"
